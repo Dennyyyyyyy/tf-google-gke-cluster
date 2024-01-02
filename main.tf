@@ -1,5 +1,6 @@
 provider "google" {
   # Configuration options
+  credentials = file("/home/workdlout/TF/sa_api.json")
   project = var.GOOGLE_PROJECT
   region  = var.GOOGLE_REGION
 }
@@ -10,7 +11,7 @@ resource "google_container_cluster" "demo" {
   cluster_ipv4_cidr        = "10.48.0.0/14"
   initial_node_count       = 1
   remove_default_node_pool = true
-  
+
     workload_identity_config {
     workload_pool = "${var.GOOGLE_PROJECT}.svc.id.goog"
   }
