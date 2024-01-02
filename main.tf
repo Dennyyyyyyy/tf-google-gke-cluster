@@ -7,7 +7,7 @@ provider "google" {
 resource "google_container_cluster" "demo" {
   name     = var.GKE_CLUSTER_NAME
   location = var.GOOGLE_REGION
-
+  cluster_ipv4_cidr        = "10.48.0.0/14"
   initial_node_count       = 1
   remove_default_node_pool = true
 
