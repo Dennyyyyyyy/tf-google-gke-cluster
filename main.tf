@@ -31,6 +31,7 @@ resource "google_container_node_pool" "demo" {
   node_count = var.GKE_NUM_NODES
 
   node_config {
+    service_account = "sv-keapi@k8s-k3s-405517.iam.gserviceaccount.com"
     machine_type = var.GKE_MACHINE_TYPE
   }
 }
