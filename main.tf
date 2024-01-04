@@ -1,6 +1,6 @@
 provider "google" {
   # Configuration options
-  credentials = file("/home/workdlout/TF/sa_api.json")
+  credentials = file("/home/workdlout/tf_flux/sa_api.json")
   project = var.GOOGLE_PROJECT
   region  = var.GOOGLE_REGION
 }
